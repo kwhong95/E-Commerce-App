@@ -14,3 +14,13 @@
 ## STEP2. Navbar
 - Ant-Desgin( `PageHeader` Component )
 - Header( MainTitle, MainLogo, ShoppingCartBadge )
+
+## STEP3. Commerce Products
+> Translates to Commerce.js
+  
+1. Create API(commerce.js) - SetUp/Developer - `Public Key`
+2. Set `.env` - `REACT_APP_CHEC_KEY`
+3. libs/commerce.js - Create new Commerce Instance
+4. commerce <=> App
+- `fetchProduct` - **async/await** `product.list()`
+- useEffect - componentDidMount >> `fetchProduct`
