@@ -6,7 +6,7 @@ import { LeftOutlined } from '@ant-design/icons'
 
 import './Cart.css';
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart }) => {
 
   const EmptyCart = () => {
     return(
@@ -22,14 +22,18 @@ const Cart = ({ cart }) => {
         <Row gutter={[16, 16]}>
           {cart.line_items.map((lineItem) => (
             <Col xs={24} sm={8} key={lineItem.id}>
-              <CartItem item={lineItem} />
+              <CartItem 
+                item={lineItem}
+                handleUpdateCartQty={handleUpdateCartQty}
+                handleRemoveFromCart={handleRemoveFromCart}
+              />
             </Col>
           ))}
         </Row>
         <div className="cartBottom">
           <h2>Subtotal: {cart.subtotal.formatted_with_symbol}</h2>
           <div>
-            <Button className="emptyCartBtn" type="primary" danger>EMPTY CART</Button>
+            <Button className="emptyCartBtn" type="primary" danger onClick={handleEmptyCart}>EMPTY CART</Button>
             <Button className="checkoutBtn" type="primary">CHECKOUT</Button>
           </div>
         </div>

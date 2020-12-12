@@ -33,6 +33,8 @@
 > prop: products => product => CartIconButton
 >> onClick = CallbackFunc: AddToCart(productId, 1)
 5. TotalItems(cart.total_items): Navbar => CartBadge => Count={TotalItems}
+6. Implement additional features : 
+  - Cart Page => Badge None Display
 
 ## STEP5. ReactRouter
 1. Use React Router => `BrowserRouter as Router, Switch, Route`
@@ -49,3 +51,16 @@
 2. Create `CartItem.jsx(component)`
   - Ant-Design: Card, Button
   - Card => Item: Image, Name, Price, Quantity
+
+## STEP7. Cart Button Function
+> Commerce.js Get API Function
+  
+1. handleUpdataCartQty = **ansyc**(productId, quantity)
+  - **await** commerce.cart.`update`(productId, { **quantity** })
+  - **Update** => setCart(cart)  
+2. handleRemoveFromCart = **async**(productId)
+  - **await** commerce.cart.`remove`(productId)
+  - **Update**
+3. handleEmptyCart = **async**()
+  - **await** commerce.cart.`empty`
+  - **Update**

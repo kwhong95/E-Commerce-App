@@ -1,0 +1,12 @@
+.cardBottom {
+  display: flex;
+  text-align: center;
+}
+
+.cardQty {
+  margin-top: 5px;
+  height: 100%;
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 1em;
+}
