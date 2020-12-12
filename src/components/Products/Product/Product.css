@@ -1,0 +1,22 @@
+.root {
+  max-width: 100%;
+}
+
+.media {
+  border: 1px solid #f0f0f0;
+  height: 200px;
+}
+
+.cardContent {
+  display: flex;
+  justify-content: center;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardDesc {
+  color: grey;
+}
