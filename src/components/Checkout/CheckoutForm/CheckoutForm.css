@@ -1,0 +1,22 @@
+.toolbar {
+  height: 60px;
+}
+
+.container {
+  display: flex;
+}
+
+.checkoutForm {
+  display: flex;
+  position: absolute;
+  left: 10%;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  border: 2px solid gray;
+  width: 80%;
+}
+
+.stepForm {
+  width: 50%;
+}
