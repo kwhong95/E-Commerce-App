@@ -64,3 +64,13 @@
 3. handleEmptyCart = **async**()
   - **await** commerce.cart.`empty`
   - **Update**
+
+## STEP8. Checkout Layout
+
+1. CheckoutButton => `Link to = '/checkout`
+2. CheckoutForm.jsx
+  - Ant-Design: Steps(Step)
+3. Steps
+  - first, Shipping Address
+  - Second, Payment Details
+  - Last, Confirmation
