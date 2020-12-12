@@ -1,0 +1,36 @@
+.root {
+ margin-left: 10px;
+ margin-right: 10px;
+ padding: 10px;
+}
+
+.toolbar {
+  height: 60px;
+}
+
+.cartBottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.emptyCartBtn {
+  min-width: 150px;
+  margin-bottom: 5px;
+  margin-right: 20px;
+}
+
+.checkoutBtn {
+  min-width: 150px;
+  margin-right: 20px;
+}
+
+.cartTitle {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.cartTitleBtn {
+  margin-right: 5px;
+  vertical-align: 4px !important; 
+}
