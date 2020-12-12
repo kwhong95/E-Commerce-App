@@ -33,3 +33,19 @@
 > prop: products => product => CartIconButton
 >> onClick = CallbackFunc: AddToCart(productId, 1)
 5. TotalItems(cart.total_items): Navbar => CartBadge => Count={TotalItems}
+
+## STEP5. ReactRouter
+1. Use React Router => `BrowserRouter as Router, Switch, Route`
+2. <Router> => Navbar(Common), Products&Cart(Switch)
+3. <Route> => Set Path = "/"(product-home) , "/cart"(cart)
+
+## STEP6. Cart Layout
+1. Create `Cart.jsx(components)`
+  - Ant-Design: Button
+  - Cart's LineItem is Empty? 
+    + true => Return `Empty.jsx` 
+    + false => Return `CartItem.jsx`
+  - Create SubTotal & EmptyCart Checkout Button 
+2. Create `CartItem.jsx(component)`
+  - Ant-Design: Card, Button
+  - Card => Item: Image, Name, Price, Quantity
