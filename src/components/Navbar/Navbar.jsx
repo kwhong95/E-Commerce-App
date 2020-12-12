@@ -1,11 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { PageHeader, Badge, Button } from 'antd';
 import { ShoppingFilled } from '@ant-design/icons';
  
 import './Navbar.css';
 
 const Navbar = ({ totalItems }) => {
+  const location = useLocation();
+
   return (
     <div className="header">
       <PageHeader
@@ -13,9 +15,11 @@ const Navbar = ({ totalItems }) => {
         title="Apple Sub Store"
         extra={[
           <Link to="/cart">
-            <Badge count={totalItems}>
-              <Button type="primary" icon={<ShoppingFilled />} />
-            </Badge>
+            {location.pathname === '/' && (
+              <Badge count={totalItems}>
+                <Button type="primary" icon={<ShoppingFilled />} />
+              </Badge>
+            )}
           </Link>
         ]}
       />
